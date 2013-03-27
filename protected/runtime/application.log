@@ -1,0 +1,883 @@
+2013/03/24 14:26:08 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1. The SQL statement executed was: select'id`,`name` from `tbl_category` where `parent` = 0union select 0,'root'.
+in E:\code\book\protected\components\CategoryBehavior.php (8)
+in E:\code\book\protected\views\site\index.php (7)
+in E:\code\book\protected\views\site\index.php (7)
+2013/03/24 14:26:08 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''' at line 1. The SQL statement executed was: select'id`,`name` from `tbl_category` where `parent` = 0union select 0,'root'' in E:\lib\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\lib\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\code\book\protected\components\CategoryBehavior.php(8): CDbCommand->queryAll()
+#2 [internal function]: CategoryBehavior->getRootCategory(true)
+#3 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array(Array, Array)
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('getRootCategory', Array)
+#5 E:\code\book\protected\views\site\index.php(7): CActiveRecord->__call('getRootCategory', Array)
+#6 E:\code\book\protected\views\site\index.php(7): Category->getRootCategory(true)
+#7 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#8 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', NULL, true)
+#9 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', NULL, true)
+#10 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#11 E:\code\book\protected\controllers\SiteController.php(32): CController->render('index')
+#12 E:\lib\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('')
+#17 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#18 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 E:\code\book\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/book/
+---
+2013/03/24 14:26:41 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select 0,'root'' at line 1. The SQL statement executed was: select `id`,`name` from `tbl_category` where `parent` = 0union select 0,'root'.
+in E:\code\book\protected\components\CategoryBehavior.php (8)
+in E:\code\book\protected\views\site\index.php (7)
+in E:\code\book\protected\views\site\index.php (7)
+2013/03/24 14:26:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select 0,'root'' at line 1. The SQL statement executed was: select `id`,`name` from `tbl_category` where `parent` = 0union select 0,'root'' in E:\lib\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\lib\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\code\book\protected\components\CategoryBehavior.php(8): CDbCommand->queryAll()
+#2 [internal function]: CategoryBehavior->getRootCategory(true)
+#3 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array(Array, Array)
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('getRootCategory', Array)
+#5 E:\code\book\protected\views\site\index.php(7): CActiveRecord->__call('getRootCategory', Array)
+#6 E:\code\book\protected\views\site\index.php(7): Category->getRootCategory(true)
+#7 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#8 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', NULL, true)
+#9 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', NULL, true)
+#10 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#11 E:\code\book\protected\controllers\SiteController.php(32): CController->render('index')
+#12 E:\lib\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('')
+#17 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#18 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 E:\code\book\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/book/
+---
+2013/03/24 14:26:41 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select 0,'root'' at line 1. The SQL statement executed was: select `id`,`name` from `tbl_category` where `parent` = 0union select 0,'root'.
+in E:\code\book\protected\components\CategoryBehavior.php (8)
+in E:\code\book\protected\views\site\index.php (7)
+in E:\code\book\protected\views\site\index.php (7)
+2013/03/24 14:26:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select 0,'root'' at line 1. The SQL statement executed was: select `id`,`name` from `tbl_category` where `parent` = 0union select 0,'root'' in E:\lib\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\lib\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\code\book\protected\components\CategoryBehavior.php(8): CDbCommand->queryAll()
+#2 [internal function]: CategoryBehavior->getRootCategory(true)
+#3 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array(Array, Array)
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('getRootCategory', Array)
+#5 E:\code\book\protected\views\site\index.php(7): CActiveRecord->__call('getRootCategory', Array)
+#6 E:\code\book\protected\views\site\index.php(7): Category->getRootCategory(true)
+#7 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#8 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', NULL, true)
+#9 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', NULL, true)
+#10 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#11 E:\code\book\protected\controllers\SiteController.php(32): CController->render('index')
+#12 E:\lib\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('')
+#17 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#18 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 E:\code\book\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/book/
+---
+2013/03/24 14:26:48 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select 0,'root'' at line 1. The SQL statement executed was: select `id`,`name` from `tbl_category` where `parent` = 0union select 0,'root'.
+in E:\code\book\protected\components\CategoryBehavior.php (8)
+in E:\code\book\protected\views\site\index.php (7)
+in E:\code\book\protected\views\site\index.php (7)
+2013/03/24 14:26:48 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select 0,'root'' at line 1. The SQL statement executed was: select `id`,`name` from `tbl_category` where `parent` = 0union select 0,'root'' in E:\lib\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\lib\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\code\book\protected\components\CategoryBehavior.php(8): CDbCommand->queryAll()
+#2 [internal function]: CategoryBehavior->getRootCategory(true)
+#3 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array(Array, Array)
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('getRootCategory', Array)
+#5 E:\code\book\protected\views\site\index.php(7): CActiveRecord->__call('getRootCategory', Array)
+#6 E:\code\book\protected\views\site\index.php(7): Category->getRootCategory(true)
+#7 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#8 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', NULL, true)
+#9 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', NULL, true)
+#10 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#11 E:\code\book\protected\controllers\SiteController.php(32): CController->render('index')
+#12 E:\lib\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('')
+#17 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#18 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 E:\code\book\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/book/
+HTTP_REFERER=http://localhost/
+---
+2013/03/24 14:39:17 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[21000]: Cardinality violation: 1222 The used SELECT statements have a different number of columns. The SQL statement executed was: SELECT `id`,`name` FROM `tbl_category` WHERE `parent` = 0 UNION select 0.
+in E:\code\book\protected\components\CategoryBehavior.php (15)
+in E:\code\book\protected\forms\AddCategory.php (21)
+in E:\code\book\protected\forms\AddCategory.php (21)
+2013/03/24 14:39:17 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[21000]: Cardinality violation: 1222 The used SELECT statements have a different number of columns. The SQL statement executed was: SELECT `id`,`name` FROM `tbl_category` WHERE `parent` = 0 UNION select 0' in E:\lib\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\lib\yii\framework\db\CDbCommand.php(454): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\code\book\protected\components\CategoryBehavior.php(15): CDbCommand->queryColumn()
+#2 [internal function]: CategoryBehavior->getListIdRootCategory(true)
+#3 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array(Array, Array)
+#4 E:\code\book\protected\forms\AddCategory.php(21): CComponent->__call('getListIdRootCa...', Array)
+#5 E:\code\book\protected\forms\AddCategory.php(21): AddCategory->getListIdRootCategory(true)
+#6 E:\lib\yii\framework\base\CModel.php(283): AddCategory->rules()
+#7 E:\lib\yii\framework\base\CModel.php(260): CModel->createValidators()
+#8 E:\lib\yii\framework\base\CModel.php(546): CModel->getValidators()
+#9 E:\lib\yii\framework\gii\generators\form\FormCode.php(92): CModel->getSafeAttributeNames()
+#10 E:\lib\yii\framework\gii\generators\form\templates\default\form.php(25): FormCode->getModelAttributes()
+#11 E:\lib\yii\framework\gii\CCodeModel.php(319): require('E:\lib\yii\fram...')
+#12 E:\lib\yii\framework\gii\generators\form\FormCode.php(80): CCodeModel->render('E:\lib\yii\fram...')
+#13 E:\lib\yii\framework\gii\CCodeGenerator.php(162): FormCode->prepare()
+#14 E:\lib\yii\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#15 E:\lib\yii\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#16 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#17 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#18 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('')
+#20 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/form')
+#21 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 E:\code\book\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/book/index.php/gii/form
+HTTP_REFERER=http://localhost/book/index.php/gii/form
+---
+2013/03/24 14:39:51 [error] [exception.CException] exception 'CException' with message 'CDbCommand and its behaviors do not have a method or closure named "queryColumns".' in E:\lib\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 E:\code\book\protected\components\CategoryBehavior.php(15): CComponent->__call('queryColumns', Array)
+#1 E:\code\book\protected\components\CategoryBehavior.php(15): CDbCommand->queryColumns()
+#2 [internal function]: CategoryBehavior->getListIdRootCategory(true)
+#3 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array(Array, Array)
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('getListIdRootCa...', Array)
+#5 E:\code\book\protected\views\site\index.php(7): CActiveRecord->__call('getListIdRootCa...', Array)
+#6 E:\code\book\protected\views\site\index.php(7): Category->getListIdRootCategory(true)
+#7 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#8 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', NULL, true)
+#9 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', NULL, true)
+#10 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#11 E:\code\book\protected\controllers\SiteController.php(32): CController->render('index')
+#12 E:\lib\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('')
+#17 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#18 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 E:\code\book\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/book/
+---
+2013/03/24 14:40:01 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[21000]: Cardinality violation: 1222 The used SELECT statements have a different number of columns. The SQL statement executed was: SELECT `id`,`name` FROM `tbl_category` WHERE `parent` = 0 UNION select 0.
+in E:\code\book\protected\components\CategoryBehavior.php (15)
+in E:\code\book\protected\views\site\index.php (7)
+in E:\code\book\protected\views\site\index.php (7)
+2013/03/24 14:40:01 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[21000]: Cardinality violation: 1222 The used SELECT statements have a different number of columns. The SQL statement executed was: SELECT `id`,`name` FROM `tbl_category` WHERE `parent` = 0 UNION select 0' in E:\lib\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\lib\yii\framework\db\CDbCommand.php(454): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\code\book\protected\components\CategoryBehavior.php(15): CDbCommand->queryColumn()
+#2 [internal function]: CategoryBehavior->getListIdRootCategory(true)
+#3 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array(Array, Array)
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('getListIdRootCa...', Array)
+#5 E:\code\book\protected\views\site\index.php(7): CActiveRecord->__call('getListIdRootCa...', Array)
+#6 E:\code\book\protected\views\site\index.php(7): Category->getListIdRootCategory(true)
+#7 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#8 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', NULL, true)
+#9 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', NULL, true)
+#10 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#11 E:\code\book\protected\controllers\SiteController.php(32): CController->render('index')
+#12 E:\lib\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('')
+#17 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#18 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 E:\code\book\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/book/
+---
+2013/03/24 14:48:15 [error] [exception.CException] exception 'CException' with message 'Property "CActiveForm.enableClienValidation" is not defined.' in E:\lib\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 E:\lib\yii\framework\web\CWidgetFactory.php(161): CComponent->__set('enableClienVali...', true)
+#1 E:\lib\yii\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(AdminController), 'CActiveForm', Array)
+#2 E:\lib\yii\framework\web\CBaseController.php(189): CBaseController->createWidget('CActiveForm', Array)
+#3 E:\code\book\protected\views\admin\addCategoryForm.php(13): CBaseController->beginWidget('CActiveForm', Array)
+#4 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#5 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', Array, true)
+#6 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', Array, true)
+#7 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('addCategoryForm', Array, true)
+#8 E:\code\book\protected\controllers\AdminController.php(59): CController->render('addCategoryForm', Array)
+#9 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddCategory()
+#10 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('addcategory')
+#14 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/addcatego...')
+#15 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 E:\code\book\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/book/index.php/admin/addcategory
+HTTP_REFERER=http://localhost/book/index.php/admin/addcategory
+---
+2013/03/24 14:51:47 [error] [exception.CException] exception 'CException' with message 'AddCategory and its behaviors do not have a method or closure named "tableName".' in E:\lib\yii\framework\base\CComponent.php:265
+Stack trace:
+#0 E:\lib\yii\framework\db\ar\CActiveRecord.php(2308): CComponent->__call('tableName', Array)
+#1 E:\lib\yii\framework\db\ar\CActiveRecord.php(2308): AddCategory->tableName()
+#2 E:\lib\yii\framework\db\ar\CActiveRecord.php(387): CActiveRecordMetaData->__construct(Object(AddCategory))
+#3 E:\lib\yii\framework\validators\CUniqueValidator.php(87): CActiveRecord::model('AddCategory')
+#4 E:\lib\yii\framework\validators\CValidator.php(213): CUniqueValidator->validateAttribute(Object(AddCategory), 'slug')
+#5 E:\lib\yii\framework\base\CModel.php(159): CValidator->validate(Object(AddCategory), NULL)
+#6 E:\code\book\protected\controllers\AdminController.php(53): CModel->validate()
+#7 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddCategory()
+#8 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('addcategory')
+#12 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/addcatego...')
+#13 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 E:\code\book\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/book/index.php/admin/addcategory
+HTTP_REFERER=http://localhost/book/index.php/admin/addcategory
+---
+2013/03/24 14:53:44 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UNION select 0,'root' SELECT `id`,`name` FROM `tbl_category` WHERE `parent` = 0' at line 1. The SQL statement executed was: UNION select 0,'root' SELECT `id`,`name` FROM `tbl_category` WHERE `parent` = 0.
+in E:\code\book\protected\components\CategoryBehavior.php (8)
+in E:\code\book\protected\views\admin\addCategoryForm.php (33)
+in E:\code\book\protected\views\admin\addCategoryForm.php (33)
+2013/03/24 14:53:44 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'UNION select 0,'root' SELECT `id`,`name` FROM `tbl_category` WHERE `parent` = 0' at line 1. The SQL statement executed was: UNION select 0,'root' SELECT `id`,`name` FROM `tbl_category` WHERE `parent` = 0' in E:\lib\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\lib\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\code\book\protected\components\CategoryBehavior.php(8): CDbCommand->queryAll()
+#2 [internal function]: CategoryBehavior->getRootCategory(true)
+#3 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array(Array, Array)
+#4 E:\code\book\protected\views\admin\addCategoryForm.php(33): CComponent->__call('getRootCategory', Array)
+#5 E:\code\book\protected\views\admin\addCategoryForm.php(33): AddCategory->getRootCategory(true)
+#6 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#7 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', Array, true)
+#8 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', Array, true)
+#9 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('addCategoryForm', Array, true)
+#10 E:\code\book\protected\controllers\AdminController.php(60): CController->render('addCategoryForm', Array)
+#11 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddCategory()
+#12 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#14 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('addcategory')
+#16 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/addcatego...')
+#17 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 E:\code\book\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/book/index.php/admin/addcategory
+---
+2013/03/24 14:55:00 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select 0,'root'' at line 1. The SQL statement executed was: SELECT `id`,`name` FROM `tbl_category` WHERE `parent` = 0UNION select 0,'root'.
+in E:\code\book\protected\components\CategoryBehavior.php (8)
+in E:\code\book\protected\views\site\index.php (7)
+in E:\code\book\protected\views\site\index.php (7)
+2013/03/24 14:55:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select 0,'root'' at line 1. The SQL statement executed was: SELECT `id`,`name` FROM `tbl_category` WHERE `parent` = 0UNION select 0,'root'' in E:\lib\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\lib\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\code\book\protected\components\CategoryBehavior.php(8): CDbCommand->queryAll()
+#2 [internal function]: CategoryBehavior->getRootCategory(true)
+#3 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array(Array, Array)
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('getRootCategory', Array)
+#5 E:\code\book\protected\views\site\index.php(7): CActiveRecord->__call('getRootCategory', Array)
+#6 E:\code\book\protected\views\site\index.php(7): Category->getRootCategory(true)
+#7 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#8 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', NULL, true)
+#9 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', NULL, true)
+#10 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#11 E:\code\book\protected\controllers\SiteController.php(32): CController->render('index')
+#12 E:\lib\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#13 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#15 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('')
+#17 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#18 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 E:\code\book\index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/book/
+---
+2013/03/26 13:06:09 [error] [exception.CException] exception 'CException' with message 'AdminController cannot find the requested view "updateCategory".' in E:\lib\yii\framework\web\CController.php:878
+Stack trace:
+#0 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('updateCategory', Array, true)
+#1 E:\code\book\protected\controllers\AdminController.php(68): CController->render('updateCategory', Array)
+#2 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionUpdateCategory()
+#3 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('updatecategory')
+#7 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/updatecat...')
+#8 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#9 E:\code\book\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/book/index.php/admin/updatecategory
+---
+2013/03/26 13:16:29 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\lib\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\lib\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('updatecategory')
+#4 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/updatecat...')
+#5 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 E:\code\book\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/book/index.php/admin/updatecategory/
+---
+2013/03/26 13:16:29 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\lib\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\lib\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('updatecategory')
+#4 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/updatecat...')
+#5 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 E:\code\book\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/book/index.php/admin/updatecategory/
+---
+2013/03/26 13:16:30 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\lib\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\lib\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('updatecategory')
+#4 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/updatecat...')
+#5 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 E:\code\book\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/book/index.php/admin/updatecategory/
+---
+2013/03/26 13:16:31 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\lib\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\lib\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('updatecategory')
+#4 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/updatecat...')
+#5 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 E:\code\book\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/book/index.php/admin/updatecategory/
+---
+2013/03/26 13:18:54 [warning] [application] Failed to set unsafe attribute "created" of "UpdateCategory".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 13:19:04 [warning] [application] Failed to set unsafe attribute "created" of "UpdateCategory".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 13:19:51 [warning] [application] Failed to set unsafe attribute "created" of "UpdateCategory".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 13:19:53 [warning] [application] Failed to set unsafe attribute "created" of "UpdateCategory".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 13:19:56 [warning] [application] Failed to set unsafe attribute "created" of "UpdateCategory".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 13:20:05 [warning] [application] Failed to set unsafe attribute "created" of "UpdateCategory".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 13:20:29 [warning] [application] Failed to set unsafe attribute "created" of "UpdateCategory".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 16:16:23 [warning] [application] Failed to set unsafe attribute "created" of "UpdateCategory".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 16:18:10 [warning] [application] Failed to set unsafe attribute "created" of "UpdateCategory".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 16:19:09 [warning] [application] Failed to set unsafe attribute "created" of "UpdateCategory".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 16:19:43 [warning] [application] Failed to set unsafe attribute "created" of "UpdateCategory".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 16:20:16 [warning] [application] Failed to set unsafe attribute "created" of "UpdateCategory".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 16:22:59 [error] [php] include(CheckUnique.php): failed to open stream: No such file or directory (E:\lib\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 E:\lib\yii\framework\validators\CValidator.php(186): import()
+#1 E:\lib\yii\framework\base\CModel.php(286): createValidator()
+#2 E:\lib\yii\framework\base\CModel.php(260): UpdateCategory->createValidators()
+#3 E:\lib\yii\framework\base\CModel.php(546): UpdateCategory->getValidators()
+#4 E:\lib\yii\framework\base\CModel.php(467): UpdateCategory->getSafeAttributeNames()
+#5 E:\lib\yii\framework\base\CComponent.php(152): UpdateCategory->setAttributes()
+#6 E:\code\book\protected\controllers\AdminController.php(61): UpdateCategory->__set()
+#7 unknown(0): AdminController->actionUpdateCategory()
+#8 E:\lib\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 E:\lib\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 E:\lib\yii\framework\web\CController.php(286): AdminController->runAction()
+#12 E:\lib\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#13 E:\lib\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#14 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/admin/updatecategory/id/1
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 16:23:11 [error] [php] include(CheckUniqueValidator.php): failed to open stream: No such file or directory (E:\lib\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 E:\lib\yii\framework\validators\CValidator.php(186): import()
+#1 E:\lib\yii\framework\base\CModel.php(286): createValidator()
+#2 E:\lib\yii\framework\base\CModel.php(260): UpdateCategory->createValidators()
+#3 E:\lib\yii\framework\base\CModel.php(546): UpdateCategory->getValidators()
+#4 E:\lib\yii\framework\base\CModel.php(467): UpdateCategory->getSafeAttributeNames()
+#5 E:\lib\yii\framework\base\CComponent.php(152): UpdateCategory->setAttributes()
+#6 E:\code\book\protected\controllers\AdminController.php(61): UpdateCategory->__set()
+#7 unknown(0): AdminController->actionUpdateCategory()
+#8 E:\lib\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 E:\lib\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 E:\lib\yii\framework\web\CController.php(286): AdminController->runAction()
+#12 E:\lib\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#13 E:\lib\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#14 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/admin/updatecategory/id/1
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 16:23:26 [error] [php] include(CheckUniqueValidator.php): failed to open stream: No such file or directory (E:\lib\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 E:\lib\yii\framework\validators\CValidator.php(186): import()
+#1 E:\lib\yii\framework\base\CModel.php(286): createValidator()
+#2 E:\lib\yii\framework\base\CModel.php(260): UpdateCategory->createValidators()
+#3 E:\lib\yii\framework\base\CModel.php(546): UpdateCategory->getValidators()
+#4 E:\lib\yii\framework\base\CModel.php(467): UpdateCategory->getSafeAttributeNames()
+#5 E:\lib\yii\framework\base\CComponent.php(152): UpdateCategory->setAttributes()
+#6 E:\code\book\protected\controllers\AdminController.php(61): UpdateCategory->__set()
+#7 unknown(0): AdminController->actionUpdateCategory()
+#8 E:\lib\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 E:\lib\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 E:\lib\yii\framework\web\CController.php(286): AdminController->runAction()
+#12 E:\lib\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#13 E:\lib\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#14 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/admin/updatecategory/id/1
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 16:24:01 [error] [php] include(checkunique.php): failed to open stream: No such file or directory (E:\lib\yii\framework\YiiBase.php:421)
+Stack trace:
+#0 E:\lib\yii\framework\validators\CValidator.php(186): import()
+#1 E:\lib\yii\framework\base\CModel.php(286): createValidator()
+#2 E:\lib\yii\framework\base\CModel.php(260): UpdateCategory->createValidators()
+#3 E:\lib\yii\framework\base\CModel.php(546): UpdateCategory->getValidators()
+#4 E:\lib\yii\framework\base\CModel.php(467): UpdateCategory->getSafeAttributeNames()
+#5 E:\lib\yii\framework\base\CComponent.php(152): UpdateCategory->setAttributes()
+#6 E:\code\book\protected\controllers\AdminController.php(61): UpdateCategory->__set()
+#7 unknown(0): AdminController->actionUpdateCategory()
+#8 E:\lib\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#9 E:\lib\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#10 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 E:\lib\yii\framework\web\CController.php(286): AdminController->runAction()
+#12 E:\lib\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#13 E:\lib\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#14 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#15 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#16 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/admin/updatecategory/id/1
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/26 17:05:25 [error] [exception.CException] exception 'CException' with message 'AdminController cannot find the requested view "catgeory/_form".' in E:\lib\yii\framework\web\CController.php:878
+Stack trace:
+#0 E:\code\book\protected\views\admin\category\add.php(3): CController->renderPartial('catgeory/_form', Array)
+#1 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#2 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', Array, true)
+#3 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', Array, true)
+#4 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('category/add', Array, true)
+#5 E:\code\book\protected\controllers\AdminController.php(51): CController->render('category/add', Array)
+#6 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddCategory()
+#7 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('addcategory')
+#11 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/addcatego...')
+#12 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#13 E:\code\book\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/book/index.php/admin/addcategory
+---
+2013/03/27 11:27:42 [error] [php] Undefined index: root (E:\code\book\protected\extensions\showCategory\ShowCategory.php:20)
+Stack trace:
+#0 E:\lib\yii\framework\web\CBaseController.php(126): require()
+#1 E:\lib\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#2 E:\lib\yii\framework\web\CController.php(784): SiteController->renderFile()
+#3 E:\code\book\protected\controllers\SiteController.php(33): SiteController->render()
+#4 E:\lib\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#5 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\lib\yii\framework\web\CController.php(286): SiteController->runAction()
+#7 E:\lib\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#8 E:\lib\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#9 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/site/index
+in E:\code\book\protected\extensions\showCategory\ShowCategory.php (20)
+in E:\code\book\protected\views\layouts\column2.php (14)
+in E:\code\book\protected\controllers\SiteController.php (33)
+2013/03/27 11:31:50 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[21000]: Cardinality violation: 1222 The used SELECT statements have a different number of columns. The SQL statement executed was: SELECT `id`,`name`,`slug` FROM `tbl_category` WHERE `parent` = 0 UNION select 0,'root'.
+in E:\code\book\protected\components\CategoryBehavior.php (8)
+in E:\code\book\protected\views\admin\category\_form.php (33)
+in E:\code\book\protected\views\admin\category\_form.php (33)
+2013/03/27 11:31:50 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[21000]: Cardinality violation: 1222 The used SELECT statements have a different number of columns. The SQL statement executed was: SELECT `id`,`name`,`slug` FROM `tbl_category` WHERE `parent` = 0 UNION select 0,'root'' in E:\lib\yii\framework\db\CDbCommand.php:541
+Stack trace:
+#0 E:\lib\yii\framework\db\CDbCommand.php(395): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 E:\code\book\protected\components\CategoryBehavior.php(8): CDbCommand->queryAll()
+#2 [internal function]: CategoryBehavior->getRootCategory(true)
+#3 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array(Array, Array)
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): CComponent->__call('getRootCategory', Array)
+#5 E:\code\book\protected\views\admin\category\_form.php(33): CActiveRecord->__call('getRootCategory', Array)
+#6 E:\code\book\protected\views\admin\category\_form.php(33): Category->getRootCategory(true)
+#7 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#8 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', Array, true)
+#9 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', Array, true)
+#10 E:\code\book\protected\views\admin\category\add.php(6): CController->renderPartial('category/_form', Array)
+#11 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#12 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', Array, true)
+#13 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', Array, true)
+#14 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('category/add', Array, true)
+#15 E:\code\book\protected\controllers\AdminController.php(55): CController->render('category/add', Array)
+#16 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddCategory()
+#17 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('addcategory')
+#21 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/addcatego...')
+#22 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 E:\code\book\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/book/index.php/admin/addcategory
+HTTP_REFERER=http://127.0.0.1/book/index.php/admin/addcategory
+---
+2013/03/27 12:21:40 [error] [php] get_class() expects parameter 1 to be object, string given (E:\code\book\protected\extensions\chooseCategory\ChooseCategory.php:12)
+Stack trace:
+#0 E:\lib\yii\framework\web\CBaseController.php(172): SiteController->createWidget()
+#1 E:\code\book\protected\views\site\index.php(10): SiteController->widget()
+#2 E:\lib\yii\framework\web\CBaseController.php(126): require()
+#3 E:\lib\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#4 E:\lib\yii\framework\web\CController.php(869): SiteController->renderFile()
+#5 E:\lib\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#6 E:\code\book\protected\controllers\SiteController.php(33): SiteController->render()
+#7 E:\lib\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#8 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 E:\lib\yii\framework\web\CController.php(286): SiteController->runAction()
+#10 E:\lib\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#11 E:\lib\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#12 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/site/index
+in E:\code\book\protected\extensions\chooseCategory\ChooseCategory.php (12)
+in E:\code\book\protected\views\site\index.php (10)
+in E:\code\book\protected\controllers\SiteController.php (33)
+2013/03/27 12:21:59 [error] [php] Undefined variable: rootCategory (E:\code\book\protected\extensions\chooseCategory\ChooseCategory.php:18)
+Stack trace:
+#0 E:\lib\yii\framework\web\CBaseController.php(126): require()
+#1 E:\lib\yii\framework\web\CBaseController.php(95): SiteController->renderInternal()
+#2 E:\lib\yii\framework\web\CController.php(869): SiteController->renderFile()
+#3 E:\lib\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#4 E:\code\book\protected\controllers\SiteController.php(33): SiteController->render()
+#5 E:\lib\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#6 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 E:\lib\yii\framework\web\CController.php(286): SiteController->runAction()
+#8 E:\lib\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#9 E:\lib\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#10 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/site/index
+in E:\code\book\protected\extensions\chooseCategory\ChooseCategory.php (18)
+in E:\code\book\protected\views\site\index.php (10)
+in E:\code\book\protected\controllers\SiteController.php (33)
+2013/03/27 13:27:35 [error] [exception.CException] exception 'CException' with message 'Property "CFileValidator.type" is not defined.' in E:\lib\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 E:\lib\yii\framework\validators\CValidator.php(189): CComponent->__set('type', 'jpg,jpeg,gif,pn...')
+#1 E:\lib\yii\framework\base\CModel.php(286): CValidator::createValidator('file', Object(Product), 'image', Array)
+#2 E:\lib\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 E:\lib\yii\framework\base\CModel.php(303): CModel->getValidators('name')
+#4 E:\lib\yii\framework\web\helpers\CHtml.php(1237): CModel->isAttributeRequired('name')
+#5 E:\lib\yii\framework\web\widgets\CActiveForm.php(562): CHtml::activeLabelEx(Object(Product), 'name', Array)
+#6 E:\code\book\protected\views\admin\product\_form.php(19): CActiveForm->labelEx(Object(Product), 'name')
+#7 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#8 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', Array, true)
+#9 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', Array, true)
+#10 E:\code\book\protected\views\admin\product\add.php(6): CController->renderPartial('product/_form', Array)
+#11 E:\lib\yii\framework\web\CBaseController.php(126): require('E:\code\book\pr...')
+#12 E:\lib\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\code\book\pr...', Array, true)
+#13 E:\lib\yii\framework\web\CController.php(869): CBaseController->renderFile('E:\code\book\pr...', Array, true)
+#14 E:\lib\yii\framework\web\CController.php(782): CController->renderPartial('product/add', Array, true)
+#15 E:\code\book\protected\controllers\AdminController.php(72): CController->render('product/add', Array)
+#16 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddProduct()
+#17 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('addproduct')
+#21 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/addproduc...')
+#22 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 E:\code\book\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/book/index.php/admin/addproduct
+---
+2013/03/27 13:28:47 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 13:29:53 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 13:32:53 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 13:32:53 [error] [php] move_uploaded_file(E:/code/bookimages/ptoducts/27b3503cc533a54c50592a816821e724.jpg): failed to open stream: No such file or directory (E:\lib\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 unknown(0): ProductBehavior->uploadFile()
+#1 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array()
+#2 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): Product->__call()
+#3 E:\code\book\protected\models\Product.php(113): Product->__call()
+#4 E:\code\book\protected\models\Product.php(113): Product->uploadFile()
+#5 E:\lib\yii\framework\db\ar\CActiveRecord.php(1017): Product->beforeSave()
+#6 E:\lib\yii\framework\db\ar\CActiveRecord.php(795): Product->insert()
+#7 E:\code\book\protected\controllers\AdminController.php(65): Product->save()
+#8 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddProduct()
+#9 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 E:\lib\yii\framework\web\CController.php(286): AdminController->runAction()
+#11 E:\lib\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#12 E:\lib\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#13 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/admin/addproduct
+in E:\code\book\protected\components\ProductBehavior.php (8)
+in E:\code\book\protected\models\Product.php (113)
+in E:\code\book\protected\models\Product.php (113)
+2013/03/27 13:33:33 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 13:33:33 [error] [php] move_uploaded_file(E:/code/book/images/ptoducts/177412258914d116c890e3f9a4d9e8c4.jpg): failed to open stream: No such file or directory (E:\lib\yii\framework\web\CUploadedFile.php:196)
+Stack trace:
+#0 unknown(0): ProductBehavior->uploadFile()
+#1 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array()
+#2 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): Product->__call()
+#3 E:\code\book\protected\models\Product.php(113): Product->__call()
+#4 E:\code\book\protected\models\Product.php(113): Product->uploadFile()
+#5 E:\lib\yii\framework\db\ar\CActiveRecord.php(1017): Product->beforeSave()
+#6 E:\lib\yii\framework\db\ar\CActiveRecord.php(795): Product->insert()
+#7 E:\code\book\protected\controllers\AdminController.php(65): Product->save()
+#8 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddProduct()
+#9 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#10 E:\lib\yii\framework\web\CController.php(286): AdminController->runAction()
+#11 E:\lib\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#12 E:\lib\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#13 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#14 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/admin/addproduct
+in E:\code\book\protected\components\ProductBehavior.php (8)
+in E:\code\book\protected\models\Product.php (113)
+in E:\code\book\protected\models\Product.php (113)
+2013/03/27 13:33:57 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 13:37:30 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 13:43:03 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\lib\yii\framework\web\CController.php:336
+Stack trace:
+#0 E:\lib\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\lib\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\lib\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\lib\yii\framework\web\CWebApplication.php(282): CController->run('updateProduct')
+#4 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/updatePro...')
+#5 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#6 E:\code\book\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/book/index.php/admin/updateProduct
+---
+2013/03/27 14:05:36 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 14:42:19 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 14:43:07 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 14:43:34 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 14:44:04 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:21:03 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:21:03 [error] [php] Creating default object from empty value (E:\code\book\protected\components\ProductBehavior.php:33)
+Stack trace:
+#0 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array()
+#1 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): Product->__call()
+#2 E:\code\book\protected\models\Product.php(133): Product->__call()
+#3 E:\code\book\protected\models\Product.php(133): Product->updateCatgeoryForProduct()
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(1043): Product->afterSave()
+#5 E:\lib\yii\framework\db\ar\CActiveRecord.php(795): Product->insert()
+#6 E:\code\book\protected\controllers\AdminController.php(66): Product->save()
+#7 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddProduct()
+#8 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 E:\lib\yii\framework\web\CController.php(286): AdminController->runAction()
+#10 E:\lib\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#11 E:\lib\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#12 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/admin/addproduct
+in E:\code\book\protected\components\ProductBehavior.php (33)
+in E:\code\book\protected\components\ProductBehavior.php (26)
+in E:\code\book\protected\models\Product.php (133)
+2013/03/27 16:22:22 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:23:32 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:23:32 [error] [php] Creating default object from empty value (E:\code\book\protected\components\ProductBehavior.php:33)
+Stack trace:
+#0 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array()
+#1 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): Product->__call()
+#2 E:\code\book\protected\models\Product.php(133): Product->__call()
+#3 E:\code\book\protected\models\Product.php(133): Product->updateCatgeoryForProduct()
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(1043): Product->afterSave()
+#5 E:\lib\yii\framework\db\ar\CActiveRecord.php(795): Product->insert()
+#6 E:\code\book\protected\controllers\AdminController.php(66): Product->save()
+#7 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddProduct()
+#8 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 E:\lib\yii\framework\web\CController.php(286): AdminController->runAction()
+#10 E:\lib\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#11 E:\lib\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#12 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/admin/addproduct
+in E:\code\book\protected\components\ProductBehavior.php (33)
+in E:\code\book\protected\components\ProductBehavior.php (26)
+in E:\code\book\protected\models\Product.php (133)
+2013/03/27 16:24:34 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:24:34 [error] [php] Creating default object from empty value (E:\code\book\protected\components\ProductBehavior.php:35)
+Stack trace:
+#0 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array()
+#1 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): Product->__call()
+#2 E:\code\book\protected\models\Product.php(133): Product->__call()
+#3 E:\code\book\protected\models\Product.php(133): Product->updateCatgeoryForProduct()
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(1043): Product->afterSave()
+#5 E:\lib\yii\framework\db\ar\CActiveRecord.php(795): Product->insert()
+#6 E:\code\book\protected\controllers\AdminController.php(66): Product->save()
+#7 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddProduct()
+#8 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 E:\lib\yii\framework\web\CController.php(286): AdminController->runAction()
+#10 E:\lib\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#11 E:\lib\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#12 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/admin/addproduct
+in E:\code\book\protected\components\ProductBehavior.php (35)
+in E:\code\book\protected\components\ProductBehavior.php (26)
+in E:\code\book\protected\models\Product.php (133)
+2013/03/27 16:25:11 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:27:30 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:27:56 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:28:29 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:28:59 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:29:33 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:30:24 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:30:53 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:31:44 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:31:44 [error] [php] Creating default object from empty value (E:\code\book\protected\components\ProductBehavior.php:35)
+Stack trace:
+#0 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array()
+#1 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): Product->__call()
+#2 E:\code\book\protected\models\Product.php(133): Product->__call()
+#3 E:\code\book\protected\models\Product.php(133): Product->updateCatgeoryForProduct()
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(1043): Product->afterSave()
+#5 E:\lib\yii\framework\db\ar\CActiveRecord.php(795): Product->insert()
+#6 E:\code\book\protected\controllers\AdminController.php(65): Product->save()
+#7 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddProduct()
+#8 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 E:\lib\yii\framework\web\CController.php(286): AdminController->runAction()
+#10 E:\lib\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#11 E:\lib\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#12 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/admin/addproduct
+in E:\code\book\protected\components\ProductBehavior.php (35)
+in E:\code\book\protected\components\ProductBehavior.php (26)
+in E:\code\book\protected\models\Product.php (133)
+2013/03/27 16:32:24 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:33:20 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:33:20 [error] [php] Creating default object from empty value (E:\code\book\protected\components\ProductBehavior.php:34)
+Stack trace:
+#0 E:\lib\yii\framework\base\CComponent.php(260): call_user_func_array()
+#1 E:\lib\yii\framework\db\ar\CActiveRecord.php(225): Product->__call()
+#2 E:\code\book\protected\models\Product.php(133): Product->__call()
+#3 E:\code\book\protected\models\Product.php(133): Product->updateCatgeoryForProduct()
+#4 E:\lib\yii\framework\db\ar\CActiveRecord.php(1043): Product->afterSave()
+#5 E:\lib\yii\framework\db\ar\CActiveRecord.php(795): Product->insert()
+#6 E:\code\book\protected\controllers\AdminController.php(65): Product->save()
+#7 E:\lib\yii\framework\web\actions\CInlineAction.php(49): AdminController->actionAddProduct()
+#8 E:\lib\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 E:\lib\yii\framework\web\CController.php(286): AdminController->runAction()
+#10 E:\lib\yii\framework\web\CController.php(265): AdminController->runActionWithFilters()
+#11 E:\lib\yii\framework\web\CWebApplication.php(282): AdminController->run()
+#12 E:\lib\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 E:\lib\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 E:\code\book\index.php(13): CWebApplication->run()
+REQUEST_URI=/book/index.php/admin/addproduct
+in E:\code\book\protected\components\ProductBehavior.php (34)
+in E:\code\book\protected\components\ProductBehavior.php (26)
+in E:\code\book\protected\models\Product.php (133)
+2013/03/27 16:34:34 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:40:19 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:40:37 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
+2013/03/27 16:40:47 [warning] [application] Failed to set unsafe attribute "image" of "Product".
+in E:\code\book\protected\controllers\AdminController.php (61)
+in E:\code\book\index.php (13)
